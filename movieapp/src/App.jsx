@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import './App.css'
 import { Container, Row, Col } from 'react-bootstrap';
+import { Routes, Route } from 'react-router-dom';
 import MovieCard from './components/MovieCards';
 import MovieList from './components/MovieLists';
 import Filter from './components/Filter';
+import {TrailerPage} from './components/Trailerpage';
+
 
 const App = () => {
+  <Routes>
+      <Route path='trailer' element={<TrailerPage/>}></Route>
+  </Routes>
   const [movies, setMovies] = useState([
     {
       id: 1,
@@ -20,6 +26,7 @@ const App = () => {
         description: 'Paul Atreides, a brilliant and gifted young man with a destiny greater than himself, must travel to the most dangerous planet in the universe in order to secure the future of his family and his people.',
         posterURL: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Dune_%282021_film%29.jpg/220px-Dune_%282021_film%29.jpg',
         rating: 5.0,
+        
     },
   ]);
 
